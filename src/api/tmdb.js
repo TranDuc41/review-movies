@@ -37,3 +37,9 @@ export const getMovieReviews = (movieId) =>
 
 export const getMovieCredits = (movieId) =>
   fetchFromTMDB(TMDB_ENDPOINTS.MOVIECREDITS(movieId));
+
+export const getMoviePopular = (page = "1") =>
+  fetchFromTMDB(TMDB_ENDPOINTS.POPULAR(page));
+
+export const getMovieGenres = () =>
+  fetchFromTMDB(TMDB_ENDPOINTS.MOVIE_GENRES());

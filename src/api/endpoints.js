@@ -9,4 +9,8 @@ export const TMDB_ENDPOINTS = {
   REVIEW: (movieId) => `/movie/${movieId}/reviews`,
 
   MOVIECREDITS: (movieId) => `/movie/${movieId}/credits?language=en-US`,
+
+  POPULAR: (page = "1") => `/movie/popular?language=vi-VN&page=${page}`,
+
+  MOVIE_GENRES: () => `/genre/movie/list`,
 };

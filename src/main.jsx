@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import { MovieDetail } from './pages/MovieDetail.jsx'
+import { Movie } from './pages/Movie.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} /> {/* / */}
         <Route path="movie/:id" element={<MovieDetail />} />
+        <Route path="movie" element={<Movie />} />
       </Route>
     </Routes>
   </BrowserRouter>
