@@ -13,4 +13,6 @@ export const TMDB_ENDPOINTS = {
   POPULAR: (page = "1") => `/movie/popular?language=vi-VN&page=${page}`,
 
   MOVIE_GENRES: () => `/genre/movie/list`,
+
+  NOWPLAYING: (page = "1") => `/movie/now_playing?language=vi-VN&page=${page}`,
 };

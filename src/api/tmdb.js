@@ -43,3 +43,6 @@ export const getMoviePopular = (page = "1") =>
 
 export const getMovieGenres = () =>
   fetchFromTMDB(TMDB_ENDPOINTS.MOVIE_GENRES());
+
+export const getMovieNowPlaying = (page = "1") =>
+  fetchFromTMDB(TMDB_ENDPOINTS.NOWPLAYING(page));
