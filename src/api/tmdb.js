@@ -46,3 +46,12 @@ export const getMovieGenres = () =>
 
 export const getMovieNowPlaying = (page = "1") =>
   fetchFromTMDB(TMDB_ENDPOINTS.NOWPLAYING(page));
+
+export const searchPerson = (query) =>
+  fetchFromTMDB(TMDB_ENDPOINTS.SEARCH_PERSON(query));
+
+export const getCastDetail = (castId) =>
+  fetchFromTMDB(TMDB_ENDPOINTS.CAST_DETAIL(castId));
+
+export const getPersonCredits = (personId) =>
+  fetchFromTMDB(TMDB_ENDPOINTS.PERSON_CREDITS(personId));

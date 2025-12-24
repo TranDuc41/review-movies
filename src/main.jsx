@@ -7,6 +7,7 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import { MovieDetail } from "./pages/MovieDetail.jsx";
 import { Movie } from "./pages/Movie.jsx";
 import { NowPlay } from "./pages/NowPlay.jsx";
+import { CastDetail } from "./pages/CastDetail.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="movie/:id" element={<MovieDetail />} />
           <Route path="movie" element={<Movie />} />
           <Route path="movie/now-playing" element={<NowPlay />} />
+          <Route path="cast/:name" element={<CastDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

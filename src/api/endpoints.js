@@ -15,4 +15,12 @@ export const TMDB_ENDPOINTS = {
   MOVIE_GENRES: () => `/genre/movie/list`,
 
   NOWPLAYING: (page = "1") => `/movie/now_playing?language=vi-VN&page=${page}`,
+
+  SEARCH_PERSON: (query) =>
+    `/search/person?query=${encodeURIComponent(query)}&language=vi-VN`,
+
+  CAST_DETAIL: (castId) => `/person/${castId}?language=vi-VN`,
+
+  PERSON_CREDITS: (personId) =>
+    `/person/${personId}/movie_credits?language=vi-VN`,
 };

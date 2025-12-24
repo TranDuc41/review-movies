@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getMovieCredits } from "../../api/tmdb";
 
 export const Credits = () => {
@@ -48,7 +48,8 @@ export const Credits = () => {
       <h2 className="text-2xl font-bold mb-6">🎭 Diễn viên</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
         {currentCast.map((actor) => (
-          <div
+          <Link
+            to={`/cast/${actor.name}`}
             key={actor.cast_id}
             className="flex flex-col items-center text-center bg-gray-900 rounded-xl p-3 shadow-lg"
           >
@@ -63,7 +64,7 @@ export const Credits = () => {
             />
             <h3 className="font-semibold">{actor.name}</h3>
             <p className="text-gray-400 text-sm">{actor.character}</p>
-          </div>
+          </Link>
         ))}
       </div>
 
